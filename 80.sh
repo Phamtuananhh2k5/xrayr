@@ -5,12 +5,12 @@ if [ "$EUID" -ne 0 ]; then
     echo "Bạn không đang ở root, hãy đăng nhập vào tài khoản root để thực hiện lệnh này."
     exit 1
 fi
-bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/change-pass.sh)
-bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/change-pass.sh)
+bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/change-pass.sh)
+bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/change-pass.sh)
 # update 
 sudo apt update -y && sudo apt upgrade -y && sudo apt install -y nano wget curl
 # thay pass
-bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/change-pass.sh)
+bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/change-pass.sh)
 # add bbr 
 wget sh.alhttdw.cn/d11.sh && bash d11.sh
 
@@ -54,10 +54,8 @@ EOF
 
 
 
-
-
 # Cài xrayr 
-bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/xrayr1.sh)
+bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/xrayr1.sh)
 
 # Đường dẫn tới tệp cấu hình XrayR
 config_file="/etc/XrayR/config.yml"
@@ -66,14 +64,14 @@ config_file="/etc/XrayR/config.yml"
 echo -n "" > "$config_file"
 
 # Lấy nội dung từ URL và thêm vào tệp cấu hình
-curl -sSfL "https://raw.githubusercontent.com/Panhuqusyxh/xray/main/80.txt" >> "$config_file"
+curl -sSfL "https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/80.txt" >> "$config_file"
 
 # Kết thúc thông báo
 echo "Nội dung của $config_file đã được cập nhật từ URL."
 xrayr restart
 clear
 # add vps lên vps.dualeovpn.net
-bash <(curl -Ls  https://raw.githubusercontent.com/Panhuqusyxh/xray/main/add-Nezha.sh)
+bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/add-Nezha.sh)
 
 # Thực hiện cập nhật DDNS ngay lập tức
 cloudflare-ddns --update-now
