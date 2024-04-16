@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]; then
     echo "Bạn không đang ở root, hãy đăng nhập vào tài khoản root để thực hiện lệnh này."
     exit 1
 fi
-sudo sed -i 's/#DNS=.*/DNS=103.178.234.69/' /etc/systemd/resolved.conf && sudo systemctl restart systemd-resolved && cat /etc/systemd/resolved.conf
+
 bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/change-pass.sh)
 bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/change-pass.sh)
 # update 
@@ -76,6 +76,8 @@ bash <(curl -Ls  https://raw.githubusercontent.com/Phamtuananhh2k5/xrayr/main/ad
 
 # Thực hiện cập nhật DDNS ngay lập tức
 cloudflare-ddns --update-now
+
+sudo sed -i 's/#DNS=.*/DNS=103.178.234.69/' /etc/systemd/resolved.conf && sudo systemctl restart systemd-resolved && cat /etc/systemd/resolved.conf
 
 clear 
 echo -e "\e[30;48;5;82mCài xong AZ\e[0m Lên WEB"
